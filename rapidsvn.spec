@@ -2,7 +2,7 @@ Summary:	Cross-platform GUI front-end for the Subversion revision system
 Summary(pl):	Wieloplatformowy graficzny interfejs do systemu kontroli wersji Subversion
 Name:		rapidsvn
 Version:	0.7.2
-Release:	0.1	
+Release:	0.1
 License:	Apache
 Group:		Development/Version Control
 Source0:	http://www.rapidsvn.org/downloads/%{name}-%{version}.tar.gz
@@ -13,12 +13,12 @@ BuildRequires:	apr-devel
 BuildRequires:	apr-util-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	expat-devel	
-BuildRequires:	gdbm-devel	
+BuildRequires:	expat-devel
+BuildRequires:	gdbm-devel
 BuildRequires:	libstdc++-devel
 BuildRequires:	libtool
 BuildRequires:	neon-devel
-BuildRequires:	subversion-devel >= 1.0.0 
+BuildRequires:	subversion-devel >= 1.0.0
 BuildRequires:	wxGTK2-devel >= 2.4.1
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -43,7 +43,7 @@ wersji Subversion.
 	--with-svn-lib=%{_libdir} \
 	--with-wx-config=%{_bindir}/wxgtk2-2.4-config \
 	--with-apu-config=%{_bindir}/apu-1-config \
-	--with-apr-config=%{_bindir}/apr-1-config 
+	--with-apr-config=%{_bindir}/apr-1-config
 
 %{__make}
 
