@@ -9,11 +9,13 @@ Source0:	http://rapidsvn.tigris.org/files/documents/341/8734/%{name}-%{version}.
 # Source0-md5:	d8943ea719303e96180f79eb265f9059
 URL:		http://rapidsvn.tigris.org/
 BuildRequires:	apr-devel
+BuildRequires:	apr-util-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
 Buildrequires:	libstdc++-devel
 BuildRequires:	libtool
 BuildRequires:	neon-devel
+BuildRequires:	openldap-devel
 BuildRequires:	subversion-devel >= 0.28.0
 BuildRequires:	wxGTK2-devel >= 2.4.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
