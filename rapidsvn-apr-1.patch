@@ -1,0 +1,12 @@
+diff -Naur rapidsvn-0.7.2.orig/src/svncpp/path.cpp rapidsvn-0.7.2/src/svncpp/path.cpp
+--- rapidsvn-0.7.2.orig/src/svncpp/path.cpp	2004-12-24 14:22:37.000000000 +0100
++++ rapidsvn-0.7.2/src/svncpp/path.cpp	2005-01-25 15:36:17.582221904 +0100
+@@ -259,7 +259,7 @@
+     Pool pool;
+ 
+     apr_status_t stat = apr_temp_dir_get (&tempdir, pool);
+-    if (!APR_STATUS_IS_SUCCESS(stat))
++    if (stat != APR_SUCCESS)
+     {
+       tempdir = NULL;
+     }
