@@ -8,6 +8,7 @@ Group:		Development/Version Control
 Source0:	http://www.rapidsvn.org/downloads/%{name}-%{version}.tar.gz
 # Source0-md5:	e2c16a506b2bc20f4532ce40ce1a117c
 Patch0:		%{name}-ac_flags.patch
+Patch1:		%{name}-apr-1.patch
 URL:		http://rapidsvn.tigris.org/
 BuildRequires:	apr-devel
 BuildRequires:	apr-util-devel
@@ -32,7 +33,7 @@ wersji Subversion.
 %prep
 %setup -q
 %patch0 -p1
-
+%patch1 -p1
 %build
 %{__libtoolize}
 %{__aclocal}
