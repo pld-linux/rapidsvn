@@ -15,7 +15,7 @@ BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	expat-devel	
 BuildRequires:	gdbm-devel	
-Buildrequires:	libstdc++-devel
+BuildRequires:	libstdc++-devel
 BuildRequires:	libtool
 BuildRequires:	neon-devel
 BuildRequires:	subversion-devel >= 1.0.0 
