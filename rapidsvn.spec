@@ -12,8 +12,8 @@ BuildRequires:	apr-devel
 BuildRequires:	apr-util-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	gdbm-devel	
 BuildRequires:	expat-devel	
+BuildRequires:	gdbm-devel	
 Buildrequires:	libstdc++-devel
 BuildRequires:	libtool
 BuildRequires:	neon-devel
