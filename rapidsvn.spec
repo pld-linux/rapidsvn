@@ -11,6 +11,7 @@ URL:		http://rapidsvn.tigris.org/
 BuildRequires:	apr-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
+Buildrequires:	libstdc++-devel
 BuildRequires:	libtool
 BuildRequires:	neon-devel
 BuildRequires:	subversion-devel >= 0.28.0
