@@ -41,7 +41,10 @@ wersji Subversion.
 %configure \
 	--with-svn-include=%{_includedir} \
 	--with-svn-lib=%{_libdir} \
-	--with-wx-config=%{_bindir}/wxgtk2-2.4-config
+	--with-wx-config=%{_bindir}/wxgtk2-2.4-config \
+	--with-apu-config=%{_bindir}/apu-1-config \
+	--with-apr-config=%{_bindir}/apr-1-config 
+
 %{__make}
 
 %install
