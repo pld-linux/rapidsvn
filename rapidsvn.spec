@@ -6,7 +6,7 @@ License:	Apache
 Group:		Development/Version Control
 Source0:	http://rapidsvn.tigris.org/files/documents/341/5875/%{name}-%{version}.tar.gz
 # Source0-md5:	b9d4a61467adcf9a899fd9d0ee24e230
-URL:		http://rapidsvn.subversion.org/
+URL:		http://rapidsvn.tigris.org/
 BuildRequires:	subversion-devel >= 0.28.0
 BuildRequires:	wxGTK2-devel >= 2.4.0
 BuildRequires:	apr-devel
