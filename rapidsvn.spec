@@ -10,8 +10,8 @@ Source0:	http://www.rapidsvn.org/downloads/%{name}-%{version}.tar.gz
 Patch0:		%{name}-ac_flags.patch
 Patch1:		%{name}-apr-1.patch
 URL:		http://rapidsvn.tigris.org/
-BuildRequires:	apr-devel
-BuildRequires:	apr-util-devel
+BuildRequires:	apr-devel >= 1:1.0
+BuildRequires:	apr-util-devel >= 1:1.0
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	expat-devel
@@ -34,6 +34,7 @@ wersji Subversion.
 %setup -q
 %patch0 -p1
 %patch1 -p1
+
 %build
 %{__libtoolize}
 %{__aclocal}
