@@ -7,6 +7,7 @@ License:	Apache
 Group:		Development/Version Control
 Source0:	http://www.rapidsvn.org/downloads/%{name}-%{version}.tar.gz
 # Source0-md5:	41517d05d055e6321d5e034499a82623
+Patch0:		%{name}-ac_flags.patch
 URL:		http://rapidsvn.tigris.org/
 BuildRequires:	apr-devel
 BuildRequires:	apr-util-devel
@@ -30,6 +31,7 @@ wersji Subversion.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 %{__libtoolize}
