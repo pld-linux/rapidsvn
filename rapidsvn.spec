@@ -12,12 +12,9 @@ BuildRequires:	apr-devel
 BuildRequires:	apr-util-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	expat-devel
-BuildRequires:	gdbm-devel
 Buildrequires:	libstdc++-devel
 BuildRequires:	libtool
 BuildRequires:	neon-devel
-BuildRequires:	openldap-devel
 BuildRequires:	subversion-devel >= 0.28.0
 BuildRequires:	wxGTK2-devel >= 2.4.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
