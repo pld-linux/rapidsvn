@@ -1,12 +1,12 @@
 Summary:	Cross-platform GUI front-end for the Subversion revision system
 Summary(pl):	Wieloplatformowy graficzny interfejs do systemu kontroli wersji Subversion
 Name:		rapidsvn
-Version:	0.3.0
+Version:	0.4.0
 Release:	1
 License:	Apache
 Group:		Development/Version Control
-Source0:	http://rapidsvn.tigris.org/files/documents/341/5875/%{name}-%{version}.tar.gz
-# Source0-md5:	b9d4a61467adcf9a899fd9d0ee24e230
+Source0:	http://rapidsvn.tigris.org/files/documents/341/8734/%{name}-%{version}.tar.gz
+# Source0-md5:	d8943ea719303e96180f79eb265f9059
 URL:		http://rapidsvn.tigris.org/
 BuildRequires:	apr-devel
 BuildRequires:	autoconf
@@ -47,8 +47,12 @@ rm -rf $RPM_BUILD_ROOT
 %clean
 rm -fr $RPM_BUILD_ROOT
 
+%post   -p /sbin/ldconfig
+%postun -p /sbin/ldconfig
+
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS README
 %attr(755,root,root) %{_bindir}/*
+%{_libdir}/lib*.so.*
 %{_mandir}/man1/*
