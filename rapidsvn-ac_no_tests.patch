@@ -1,0 +1,20 @@
+--- rapidsvn-0.5.0/configure.in.old	2004-03-23 21:45:39.000000000 +0100
++++ rapidsvn-0.5.0/configure.in	2004-03-23 21:48:46.000000000 +0100
+@@ -374,10 +374,10 @@
+           src/svncpp/Makefile \
+           src/res/Makefile)
+ 
+-if test "$CPPUNITCONFIG" ; then
+-    CPPUNIT_CXXFLAGS="`$CPPUNITCONFIG --cflags`"
+-    CPPUNIT_LIBS="`$CPPUNITCONFIG --libs`"
+-    AC_SUBST(CPPUNIT_LIBS)
+-    AC_SUBST(CPPUNIT_CXXFLAGS)
+-    AC_OUTPUT(src/tests/svncpp/Makefile)
+-fi
++#if test "$CPPUNITCONFIG" ; then
++#    CPPUNIT_CXXFLAGS="`$CPPUNITCONFIG --cflags`"
++#    CPPUNIT_LIBS="`$CPPUNITCONFIG --libs`"
++#    AC_SUBST(CPPUNIT_LIBS)
++#    AC_SUBST(CPPUNIT_CXXFLAGS)
++#    AC_OUTPUT(src/tests/svncpp/Makefile) <- there isn't in sources
++#fi
