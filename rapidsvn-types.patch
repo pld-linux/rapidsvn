@@ -1,29 +1,18 @@
---- rapidsvn-0.4.0/src/svncpp/revision.hpp.orig	2003-12-06 21:42:26.000000000 +0000
-+++ rapidsvn-0.4.0/src/svncpp/revision.hpp	2004-01-09 23:07:50.000000000 +0000
-@@ -62,8 +62,9 @@
-      * Constructor
+diff -Nura rapidsvn-0.5.0.bef/include/svncpp/revision.hpp rapidsvn-0.5.0/include/svncpp/revision.hpp
+--- rapidsvn-0.5.0.bef/include/svncpp/revision.hpp	2004-03-23 23:08:17.000000000 +0100
++++ rapidsvn-0.5.0/include/svncpp/revision.hpp	2004-03-23 23:09:27.000000000 +0100
+@@ -64,7 +64,7 @@
       *
       * @param date 
-+     * @param dummy to distinguish from svn_revnum_t on 64-bit machines
       */
 -    Revision (const apr_time_t date);
 +    Revision (const apr_time_t date, int dummyitsdate);
  
      /**
       * Copy constructor
---- rapidsvn-0.4.0/src/svncpp/revision.cpp.orig	2003-12-06 21:42:26.000000000 +0000
-+++ rapidsvn-0.4.0/src/svncpp/revision.cpp	2004-01-09 23:08:33.000000000 +0000
-@@ -35,7 +35,7 @@
-     m_revision.value.number = 0;
-   }
- 
--  Revision::Revision (const apr_time_t date)
-+  Revision::Revision (const apr_time_t date, int dummyitsdate)
-   {
-     m_revision.kind = svn_opt_revision_date;
-     m_revision.value.date = date;
---- rapidsvn-0.4.0/src/filelist_ctrl.hpp.orig	2003-12-06 21:42:21.000000000 +0000
-+++ rapidsvn-0.4.0/src/filelist_ctrl.hpp	2004-01-09 23:39:40.000000000 +0000
+diff -Nura rapidsvn-0.5.0.bef/src/filelist_ctrl.hpp rapidsvn-0.5.0/src/filelist_ctrl.hpp
+--- rapidsvn-0.5.0.bef/src/filelist_ctrl.hpp	2004-03-23 23:08:17.000000000 +0100
++++ rapidsvn-0.5.0/src/filelist_ctrl.hpp	2004-03-23 23:13:54.000000000 +0100
 @@ -24,8 +24,8 @@
  /**
   * Define an array of indexes of the selected items.
@@ -35,3 +24,15 @@
  #else
  WX_DEFINE_ARRAY (long, IndexArray);
  #endif
+diff -Nura rapidsvn-0.5.0.bef/src/svncpp/revision.cpp rapidsvn-0.5.0/src/svncpp/revision.cpp
+--- rapidsvn-0.5.0.bef/src/svncpp/revision.cpp	2004-03-23 23:08:17.000000000 +0100
++++ rapidsvn-0.5.0/src/svncpp/revision.cpp	2004-03-23 23:10:48.000000000 +0100
+@@ -37,7 +37,7 @@
+     m_revision.value.number = 0;
+   }
+ 
+-  Revision::Revision (const apr_time_t date)
++  Revision::Revision (const apr_time_t date, int dummyitsdate)
+   {
+     m_revision.kind = svn_opt_revision_date;
+     m_revision.value.date = date;
