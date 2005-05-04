@@ -20,7 +20,8 @@ BuildRequires:	libstdc++-devel
 BuildRequires:	libtool
 BuildRequires:	neon-devel
 BuildRequires:	subversion-devel >= 1.0.0
-BuildRequires:	wxGTK2-devel >= 2.4.1
+BuildRequires:	libuuid-devel
+BuildRequires:	wxGTK2-devel >= 2.6.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -43,7 +44,7 @@ wersji Subversion.
 %configure \
 	--with-svn-include=%{_includedir} \
 	--with-svn-lib=%{_libdir} \
-	--with-wx-config=%{_bindir}/wxgtk2-2.4-config \
+	--with-wx-config=%{_bindir}/wx-gtk2-ansi-config \
 	--with-apu-config=%{_bindir}/apu-1-config \
 	--with-apr-config=%{_bindir}/apr-1-config
 
