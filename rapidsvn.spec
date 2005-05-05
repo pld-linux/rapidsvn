@@ -1,12 +1,12 @@
 Summary:	Cross-platform GUI front-end for the Subversion revision system
 Summary(pl):	Wieloplatformowy graficzny interfejs do systemu kontroli wersji Subversion
 Name:		rapidsvn
-Version:	0.7.2
+Version:	0.8.0
 Release:	0.1
 License:	Apache
 Group:		Development/Version Control
 Source0:	http://www.rapidsvn.org/downloads/%{name}-%{version}.tar.gz
-# Source0-md5:	e2c16a506b2bc20f4532ce40ce1a117c
+# Source0-md5:	d3b91bebca61db9d92d4f234a3a1aa1f
 Patch0:		%{name}-ac_flags.patch
 Patch1:		%{name}-apr-1.patch
 URL:		http://rapidsvn.tigris.org/
@@ -19,7 +19,7 @@ BuildRequires:	gdbm-devel
 BuildRequires:	libstdc++-devel
 BuildRequires:	libtool
 BuildRequires:	neon-devel
-BuildRequires:	subversion-devel >= 1.0.0
+BuildRequires:	subversion-devel >= 1.1.0
 BuildRequires:	libuuid-devel
 BuildRequires:	wxGTK2-devel >= 2.6.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
