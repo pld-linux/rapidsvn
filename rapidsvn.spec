@@ -1,14 +1,12 @@
 Summary:	Cross-platform GUI front-end for the Subversion revision system
 Summary(pl):	Wieloplatformowy graficzny interfejs do systemu kontroli wersji Subversion
 Name:		rapidsvn
-Version:	0.8.0
+Version:	0.9.3
 Release:	0.1
 License:	Apache
 Group:		Development/Version Control
-Source0:	http://www.rapidsvn.org/downloads/%{name}-%{version}.tar.gz
-# Source0-md5:	d3b91bebca61db9d92d4f234a3a1aa1f
-Patch0:		%{name}-ac_flags.patch
-Patch1:		%{name}-apr-1.patch
+Source0:	http://rapidsvn.org/download/%{name}-%{version}.tar.gz
+# Source0-md5:	fff420fba3a1d52ff163933ecf1d14e0
 URL:		http://rapidsvn.tigris.org/
 BuildRequires:	apr-devel >= 1:1.0
 BuildRequires:	apr-util-devel >= 1:1.0
@@ -33,8 +31,6 @@ wersji Subversion.
 
 %prep
 %setup -q
-%patch0 -p1
-%patch1 -p1
 
 %build
 %{__libtoolize}
@@ -56,6 +52,12 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+install -d $RPM_BUILD_ROOT%{_mandir}/man1
+install doc/manpage/rapidsvn.1 $RPM_BUILD_ROOT%{_mandir}/man1/
+
+rm -rf $RPM_BUILD_ROOT%{_includedir}
+rm -rf $RPM_BUILD_ROOT%{_libdir}/libsvncpp.{a,la}
+
 %clean
 rm -fr $RPM_BUILD_ROOT
 
@@ -64,7 +66,7 @@ rm -fr $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS ChangeLog NEWS README
+%doc AUTHORS CHANGES NEWS README
 %attr(755,root,root) %{_bindir}/*
 %attr(755,root,root) %{_libdir}/lib*.so.*.*.*
 %{_mandir}/man1/*
