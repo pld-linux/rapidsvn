@@ -5,7 +5,7 @@ diff -urN rapidsvn-0.9.3/src/svncpp/Makefile.am rapidsvn-0.9.3.new/src/svncpp/Ma
  
  lib_LTLIBRARIES=libsvncpp.la
  
-+libsvncpp_la_LIBADD = -lsvn_clien-1
++libsvncpp_la_LIBADD = -lsvn_client-1
 +
  libsvncpp_la_SOURCES= \
  	apr.cpp \
