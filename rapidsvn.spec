@@ -7,6 +7,7 @@ License:	Apache
 Group:		Development/Version Control
 Source0:	http://rapidsvn.org/download/%{name}-%{version}.tar.gz
 # Source0-md5:	fff420fba3a1d52ff163933ecf1d14e0
+Patch0:		%{name}-link.patch
 URL:		http://rapidsvn.tigris.org/
 BuildRequires:	apr-devel >= 1:1.0
 BuildRequires:	apr-util-devel >= 1:1.0
@@ -31,6 +32,7 @@ wersji Subversion.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 %{__libtoolize}
