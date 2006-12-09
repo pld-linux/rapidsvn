@@ -1,12 +1,12 @@
 Summary:	Cross-platform GUI front-end for the Subversion revision system
 Summary(pl):	Wieloplatformowy graficzny interfejs do systemu kontroli wersji Subversion
 Name:		rapidsvn
-Version:	0.9.3
+Version:	0.9.4
 Release:	0.1
 License:	Apache
 Group:		Development/Version Control
-Source0:	http://rapidsvn.org/download/%{name}-%{version}.tar.gz
-# Source0-md5:	fff420fba3a1d52ff163933ecf1d14e0
+Source0:	http://www.rapidsvn.org/download/release/%{version}/%{name}-%{version}.tar.gz
+# Source0-md5:	29ef579131f97a8b2bdad77e14a619be
 Patch0:		%{name}-link.patch
 URL:		http://rapidsvn.tigris.org/
 BuildRequires:	apr-devel >= 1:1.0
