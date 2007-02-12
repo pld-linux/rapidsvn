@@ -1,5 +1,5 @@
 Summary:	Cross-platform GUI front-end for the Subversion revision system
-Summary(pl.UTF-8):   Wieloplatformowy graficzny interfejs do systemu kontroli wersji Subversion
+Summary(pl.UTF-8):	Wieloplatformowy graficzny interfejs do systemu kontroli wersji Subversion
 Name:		rapidsvn
 Version:	0.9.4
 Release:	0.1
