@@ -1,12 +1,11 @@
-diff -urN rapidsvn-0.9.3/src/svncpp/Makefile.am rapidsvn-0.9.3.new/src/svncpp/Makefile.am
---- rapidsvn-0.9.3/src/svncpp/Makefile.am	2006-02-10 23:43:07.000000000 +0100
-+++ rapidsvn-0.9.3.new/src/svncpp/Makefile.am	2006-11-27 21:17:37.973960250 +0100
+--- rapidsvn-0.9.8/src/svncpp/Makefile.am.orig	2008-11-28 01:46:13.000000000 +0100
++++ rapidsvn-0.9.8/src/svncpp/Makefile.am	2009-06-14 16:39:20.000000000 +0200
 @@ -3,6 +3,8 @@
  
  lib_LTLIBRARIES=libsvncpp.la
  
 +libsvncpp_la_LIBADD = -lsvn_client-1
 +
+ libsvncpp_la_LDFLAGS=-version-info 2:0:0
  libsvncpp_la_SOURCES= \
  	apr.cpp \
- 	check.cpp \
