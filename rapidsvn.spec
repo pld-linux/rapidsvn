@@ -1,12 +1,12 @@
 Summary:	Cross-platform GUI front-end for the Subversion revision system
 Summary(pl.UTF-8):	Wieloplatformowy graficzny interfejs do systemu kontroli wersji Subversion
 Name:		rapidsvn
-Version:	0.9.4
-Release:	0.1
-License:	Apache
+Version:	0.9.8
+Release:	1
+License:	GPL v3
 Group:		Development/Version Control
 Source0:	http://www.rapidsvn.org/download/release/%{version}/%{name}-%{version}.tar.gz
-# Source0-md5:	29ef579131f97a8b2bdad77e14a619be
+# Source0-md5:	1b49d893027ae83dbcff3d7508b3f42f
 Patch0:		%{name}-link.patch
 URL:		http://rapidsvn.tigris.org/
 BuildRequires:	apr-devel >= 1:1.0
@@ -20,7 +20,7 @@ BuildRequires:	libtool
 BuildRequires:	neon-devel
 BuildRequires:	subversion-devel >= 1.1.0
 BuildRequires:	libuuid-devel
-BuildRequires:	wxGTK2-devel >= 2.6.0
+BuildRequires:	wxGTK2-unicode-devel >= 2.6.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -42,7 +42,7 @@ wersji Subversion.
 %configure \
 	--with-svn-include=%{_includedir} \
 	--with-svn-lib=%{_libdir} \
-	--with-wx-config=%{_bindir}/wx-gtk2-ansi-config \
+	--with-wx-config=%{_bindir}/wx-gtk2-unicode-config \
 	--with-apu-config=%{_bindir}/apu-1-config \
 	--with-apr-config=%{_bindir}/apr-1-config
 
@@ -54,11 +54,9 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-install -d $RPM_BUILD_ROOT%{_mandir}/man1
-install doc/manpage/rapidsvn.1 $RPM_BUILD_ROOT%{_mandir}/man1/
-
+# for -devel ?
 rm -rf $RPM_BUILD_ROOT%{_includedir}
-rm -rf $RPM_BUILD_ROOT%{_libdir}/libsvncpp.{a,la}
+rm -rf $RPM_BUILD_ROOT%{_libdir}/libsvncpp.{a,la,so}
 
 %clean
 rm -fr $RPM_BUILD_ROOT
@@ -70,5 +68,5 @@ rm -fr $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS CHANGES NEWS README
 %attr(755,root,root) %{_bindir}/*
-%attr(755,root,root) %{_libdir}/lib*.so.*.*.*
-%{_mandir}/man1/*
+%attr(755,root,root) %{_libdir}/libsvncpp.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libsvncpp.so.2
